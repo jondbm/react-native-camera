@@ -127,7 +127,7 @@ Values: `true` (default), `false` (Boolean)
 *Applies to video capture mode only.* Specifies whether or not audio should be captured with the video.
 
 
-#### `iOS` `captureMode`
+#### `captureMode`
 
 Values: `Camera.constants.CaptureMode.still` (default), `Camera.constants.CaptureMode.video`
 
@@ -135,11 +135,11 @@ The type of capture that will be performed by the camera - either a still image 
 
 #### `captureTarget`
 
-Values: `Camera.constants.CaptureTarget.cameraRoll` (default), `Camera.constants.CaptureTarget.disk`, `Camera.constants.CaptureTarget.temp`, ~~`Camera.constants.CaptureTarget.memory`~~ (deprecated),
+Values: `Camera.constants.CaptureTarget.cameraRoll` (ios only default), `Camera.constants.CaptureTarget.disk` (android default), `Camera.constants.CaptureTarget.temp`, ~~`Camera.constants.CaptureTarget.memory`~~ (deprecated),
 
 This property allows you to specify the target output of the captured image data. By default the image binary is sent back as a base 64 encoded string. The disk output has been shown to improve capture response time, so that is the recommended value.
 
-#### `iOS` `captureQuality`
+#### `captureQuality`
 
 Values: `Camera.constants.CaptureQuality.high` or `"high"` (default), `Camera.constants.CaptureQuality.medium` or `"medium"`, `Camera.constants.CaptureQuality.low` or `"low"`
 
@@ -159,6 +159,12 @@ Values:
 `Camera.constants.Orientation.landscapeLeft` or `"landscapeLeft"`, `Camera.constants.Orientation.landscapeRight` or `"landscapeRight"`, `Camera.constants.Orientation.portrait` or `"portrait"`, `Camera.constants.Orientation.portraitUpsideDown` or `"portraitUpsideDown"`
 
 The `orientation` property allows you to specify the current orientation of the phone to ensure the viewfinder is "the right way up."
+
+#### `Android` `playSoundOnCapture`
+
+Values: `true` (default) or `false`
+
+This property allows you to specify whether a sound is played on capture
 
 #### `iOS` `onBarCodeRead`
 
@@ -249,7 +255,7 @@ Supported options:
 
 Returns the camera's current field of view.
 
-#### `iOS` `hasFlash(): Promise`
+#### `hasFlash(): Promise`
 
 Returns whether or not the camera has flash capabilities.
 
